@@ -13,4 +13,5 @@ while True:
     # modifies packet data
     modifiedMessage = message.decode().upper()
     print("Server received and changed original message from: " + message.decode() + " to: " + modifiedMessage)
+    print("Client's IP was: " + str(clientAddress))
     serverSocket.sendto(modifiedMessage.encode(), clientAddress)
